@@ -6,9 +6,182 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Favarite Player</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
+  <!-- top header infomation    -->
+    <header>
+        <div class="bg-black text-white p-10 text center">
+            <h1 class="text-7xl text-center justify-center items-center">Select Your Favarite Player</h1>
+            <p class="text-center mt-5">Which of your favorite players do you like ?  You can choose accordingly . So, you should choose your favarite player immediately .</p>
+        </div>
+       
+    </header>
+    <!-- ------- -->
+    <!-- main section start  -->
+    <main>
+        <section>
+            <div class="grid grid-cols-3 gap-3 ">
+                <!-- player colume 1  -->
+
+
+                <!-- palayer card 1 -->
+                 
+                <div class="grid md:grid-cols-6"><div><div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="foodball-player-img/Lionel Messi.jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title mb-4">Lionel Messi</h2>
+                      <div class="card-actions">
+                        <button onclick="playerNameAdd(this)" class="btn btn-primary">Select</button>
+                      </div>
+                    </div>
+                  </div> 
+                        <!-- -------- -->
+                  <!-- player card 2 -->
+                  <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="foodball-player-img/Cristiano Ronaldo.jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title mb-4">Cristiano Ronaldo</h2>
+                      <div class="card-actions">
+                        <button onclick="playerNameAdd(this)" class="btn btn-primary">select</button>
+                      </div>
+                    </div>
+                  </div>    
+                  <!-- ---- -->
+                  <!-- player card 3 -->
+                  
+                  <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="foodball-player-img/Erling Haaland.jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title mb-4">Erling Haaland</h2>
+                     
+                      <div class="card-actions">
+                        <button onclick="playerNameAdd(this)" class="btn btn-primary">Select</button>
+                      </div>
+                    </div>
+                  </div></div></div>
+
+
+                  <!-- ------ -->
+                <div class="grid Md:grid-cols-6 " ><div>
+                  
+                  
+                  <!-- player card 4 -->
+                  <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="foodball-player-img/Karim Benzema.jpg" alt="Shoes" class="rounded-xl img-fluied" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title mb-4">Francesco Totti</h2>
+                      
+                      <div class="card-actions">
+                        <button onclick="playerNameAdd(this)" class="btn btn-primary">Select </button>
+                      </div>
+                    </div>
+                  </div>    
+                  
+                  <!-- --- -->
+                  <!-- player card 5 -->
+                  <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="foodball-player-img/Kylian Mbappe.jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title mb-4">Kylian Mbappe</h2>
+                     
+                      <div class="card-actions">
+                        <button onclick="playerNameAdd(this)" class="btn btn-primary">Select</button>
+                      </div>
+                    </div>
+                  </div>   
+                  <!-- ------ -->
+                  <!-- player card 6 -->
+                  
+                  <div class="card w-96 bg-base-100 shadow-xl">
+                    <figure class="px-10 pt-10">
+                      <img src="foodball-player-img/Neymar.jpg" alt="Shoes" class="rounded-xl" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 class="card-title mb-4">Neymar</h2>
+                     
+                      <div class="card-actions">
+                        <button onclick="playerNameAdd(this)" class="btn btn-primary">Select</button>
+                      </div>
+                    </div>
+                  </div></div></div>
+                  <!-- ------ -->
+                <div class="bg-black p-4 text-white ">
+                  <!-- Top player names adeed -->
+                  <div class="bg-black p-3">
+                    <h1 class="text-4xl text-center mt-6 mb-3">Select Top Player-5</h1>
+                    <ul id="player-names-added">
+
+                    </ul>
+                  </div>
+                  <!-- ------ -->
+                  <!-- player total cost calculation page  -->
+                  <div>
+                    <h1 class="text-4xl text-center mt-5 mb-8">Player Budget</h1>
+                    <!-- <div class="form-control"> -->
+                      
+                      <label class="p-6 ">
+                        <span class="text-lg p-6">Per Player</span>
+                        <input type="text" placeholder="Type here" class="input input-bordered w-4/2 max-w-xs
+                        " />
+                      </label>
+                      <!-- calculat btn -->
+                      <div  class="text-center my-8">
+                        <button id="cal-btn" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-pramary text-center bolck">Calculate</button>
+
+                      </div>
+                    
+                      <!-- --- -->
+
+                      <h1 class="text-3xl text-center my-5">Player Expenses $<span>000</span></h1>
+                      <!-- manager input fild -->
+                      <label class="p-6 ">
+                        <span class="text-lg p-6">Manager</span>
+                        <input type="text" placeholder="Type here" class="input input-bordered w-4/2 max-w-xs text-black" />
+                      </label>
+                      <!-- ---- -->
+                      <!-- coach -->
+                      <div class="my-6">
+                        <label class="p-6 ">
+                          <span class="text-lg p-6 pl-11">Coach</span>
+                          <input type="text" placeholder="Type here" class="input input-bordered w-4/2 max-w-xs text-black" />
+                        </label>
+                      </div>
+                     
+
+                      <!-- ---- -->
+                      <!-- Calcolate total btn -->
+                      <div  class="text-center my-8">
+                        <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-pramary text-center bolck">Calculate Total</button>
+
+                      </div>
+                      <h1 class="text-3xl text-center my-7">Total $<span>000</span></h1>
+                    
+
+                      <!-- ---- -->
+                    </div>
+                  <!-- </div> -->
+                  <!-- -------- -->
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+
     <script src="best-player-info.js"></script>
 </body>
 
