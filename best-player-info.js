@@ -38,7 +38,7 @@ text.disabled =true;
 // ----------------names add end-------------------------
 
 
-// -----calcolat btn one start now-------
+// -----Players cost btn one start now-------
 let calcNamesTotal = 1;
 function updatePerPlayerExp(calculate){
     let perPlayerRate =1+1;
@@ -69,8 +69,8 @@ document.getElementById('cal-btn').addEventListener('click',function(){
     
 })
 
-// ---------------calcolate btn one end-------------------
-//------------ calcolate  bnt two start ----
+// ---------------Player cost total one end-------------------
+//------------ Team total cost  start ----
 function totalTeamCost ( ){
 
     const playerTotalExpense = PlayerExpensesTotal();
@@ -92,7 +92,7 @@ document.getElementById('calcolate-btn-two').addEventListener('click',function()
 
     totalTeamCost  ( )
 })
-// ------ btn two end  ------
+// ------  team total cost  end  ------
 
 
 
