@@ -1,70 +1,93 @@
-// player name add total 5 player information
-
-let allPlayerNames = []
 
 
+let allPlayerNames = [];
+
+let calcNamesTotal = 1;
 
 
-// create elment and text 
 
 
-function createTExtAdd (){
-    const createAllName = document.getElementById('player-names-added');
-    createAllName.innerText = allPlayerNames.length;
-    createAllName.textContent ='';
 
-    for (let x=0; x<allPlayerNames.length; x++){
 
-        const list = document.createElement('li');
-        list.innerHTML=`       <li>${x+1} </li>
-        <li>
- ${allPlayerNames[x].playerName}
+function display(element){
+    
+   
+    
+    const playerNameAdd= document.getElementById('player-names');
+    playerNameAdd.textContent = '';
+    
+    for (let i = 0; i < element.length; i++){
 
-        </li>`;
-        createAllName.appendChild(list);
-      
-
+const names= element[i]
+const li = document.createElement('li');
+li.innerText = names;
+playerNameAdd.appendChild(li); 
     }
+
 }
-
-
-// -------------------
-
 
 function playerNameAdd(text){
-    const playerName =text.parentNode.parentNode.children[0].innerText;
-    allPlayerNames.push(playerName);
-    createTExtAdd ()
+const playerName =text.parentNode.parentNode.children[0].innerText;
+allPlayerNames.push(playerName); 
+display(allPlayerNames);
+const headAdd = document.getElementById('add');
+headAdd.innerText = allPlayerNames.length;
+caculatPlayerExp(allPlayerNames);
 
-    
+
 
 }
 
-
-// --------------------------------------------
-
-
-
-
-function calculate (){
-    let totallPlayeaName =1;
-    const totallPlayeaNameString =  totallPlayeaName.innerText;
-    const totallPlayeaNameNumber = parseInt(totallPlayeaNameString);
-
-    for(let y = 0 ; y <allPlayerNames.length; y++){
-
-totallPlayeaName +=allPlayerNames[y]
-
-
-
+// -----------------------------------------
+// calcolat btn start now
+function caculatPlayerExp(element){
+    let calcExpenBtn =1+1;
+    calcExpenBtn.textContent ='';
+    for (let i =0 ; i< element.length; i++){
+    calcExpenBtn = `${i+1}`;
     }
-    return totallPlayeaNameNumber;
+    return calcExpenBtn;
 }
+
+
+function totalExpenses (){
+const previTotalPlayer
+    =caculatPlayerExp (allPlayerNames);
+                       
+const perPlayerFild = document.getElementById('per-player-cost');
+const perPlayerSt= perPlayerFild.value;
+const newPerPlayerFild = parseInt(perPlayerSt);
+const totalExpent = newPerPlayerFild * previTotalPlayer;
+const playerTotalExpen = document.getElementById('player-total-cost');
+playerTotalExpen.innerText = totalExpent;
+
+}
+
 
 // calculate btn add 
 document.getElementById('cal-btn').addEventListener('click',function(){
 
-const totalPlayer  = calculate()
-console.log(totalPlayer);
-
+    totalExpenses ()
+    
 })
+
+// --------------------------
+// calcolate total cost 
+
+document.getElementById('').addEventListener('click',function(){
+
+    const playerExpense = totalExpenses();
+    const managerInputFildPrice = document.getElementById('');
+    const managerInputFildStringPrice= managerInputFildPrice.value;
+    const newManagerTotalPric = parseInt(managerInputFildStringPrice);
+    const coachPriceFild = document.getElementById('');
+    const coachPriceFildDaSt= coachPriceFild.value;
+    const coachTotalPrice = parseInt(coachPriceFildDaSt);
+    const totalCost = playerExpense + newManagerTotalPric + coachTotalPrice;
+    const totalCalcoCost = document.getElementById('');
+    totalCalcoCost.innerText =totalCost;
+})
+
+
+
+

@@ -121,10 +121,13 @@
                 <div class="bg-black p-4 text-white ">
                   <!-- Top player names adeed -->
                   <div class="bg-black p-3">
-                    <h1 class="text-4xl text-center mt-6 mb-3">Select Top Player-5</h1>
-                    <ul id="player-names-added">
+                    <h1 class="text-4xl text-center mt-6 mb-3">Select Top Player <span id="add">0</span></h1>
+                    <div id="player-name-add">
+                      <ul id="player-names">
 
-                    </ul>
+                      </ul>
+
+                    </div>
                   </div>
                   <!-- ------ -->
                   <!-- player total cost calculation page  -->
@@ -134,7 +137,7 @@
                       
                       <label class="p-6 ">
                         <span class="text-lg p-6">Per Player</span>
-                        <input type="text" placeholder="Type here" class="input input-bordered w-4/2 max-w-xs
+                        <input id="per-player-cost" type="text" placeholder="Type here" class="text-black input input-bordered w-4/2 max-w-xs
                         " />
                       </label>
                       <!-- calculat btn -->
@@ -145,7 +148,7 @@
                     
                       <!-- --- -->
 
-                      <h1 class="text-3xl text-center my-5">Player Expenses $<span>000</span></h1>
+                      <h1 class="text-3xl text-center my-5">Player Expenses $<span id="player-total-cost">000</span></h1>
                       <!-- manager input fild -->
                       <label class="p-6 ">
                         <span class="text-lg p-6">Manager</span>
