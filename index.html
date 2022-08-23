@@ -14,7 +14,7 @@
   <!-- top header infomation    -->
     <header>
         <div class="bg-black text-white p-10 text center">
-            <h1 class="text-7xl text-center justify-center items-center">Select Your Favarite Player</h1>
+            <h1 class="text-7xl text-center justify-center items-center text-orange-600">Select Your Favarite Player</h1>
             <p class="text-center mt-5">Which of your favorite players do you like ?  You can choose accordingly . So, you should choose your favarite player immediately .</p>
         </div>
        
@@ -23,31 +23,31 @@
     <!-- main section start  -->
     <main>
         <section>
-            <div class="grid grid-cols-3 gap-3 ">
+            <div class="grid grid-cols-3 gap-3 bg-current p-5 gap-x-5">
                 <!-- player colume 1  -->
 
 
                 <!-- palayer card 1 -->
                  
-                <div class="grid md:grid-cols-6"><div><div class="card w-96 bg-base-100 shadow-xl">
+                <div class="grid "><div><div class="card w-96 bg-base-100 shadow-xl mb-4">
                     <figure class="px-10 pt-10">
                       <img src="foodball-player-img/Lionel Messi.jpg" alt="Shoes" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                      <h2 class="card-title mb-4">Lionel Messi</h2>
+                      <h2 class="card-title mb-4 text-2xl">Lionel Messi</h2>
                       <div class="card-actions">
-                        <button onclick="playerNameAdd(this)"  class="btn btn-primary">Select</button>
+                        <button onclick="playerNameAdd(this)"   class="btn disa btn-primary">Select</button>
                       </div>
                     </div>
                   </div> 
                         <!-- -------- -->
                   <!-- player card 2 -->
-                  <div class="card w-96 bg-base-100 shadow-xl">
+                  <div class="card w-96 bg-base-100 shadow-xl mb-4">
                     <figure class="px-10 pt-10">
                       <img src="foodball-player-img/Cristiano Ronaldo.jpg" alt="Shoes" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                      <h2 class="card-title mb-4">Cristiano Ronaldo</h2>
+                      <h2 class="card-title mb-4 text-2xl">Cristiano Ronaldo</h2>
                       <div class="card-actions">
                         <button onclick="playerNameAdd(this)" class="btn btn-primary">select</button>
                       </div>
@@ -56,12 +56,12 @@
                   <!-- ---- -->
                   <!-- player card 3 -->
                   
-                  <div class="card w-96 bg-base-100 shadow-xl">
+                  <div class="card w-96 bg-base-100 shadow-xl mb-4">
                     <figure class="px-10 pt-10">
                       <img src="foodball-player-img/Erling Haaland.jpg" alt="Shoes" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                      <h2 class="card-title mb-4">Erling Haaland</h2>
+                      <h2 class="card-title mb-4 text-2xl">Erling Haaland</h2>
                      
                       <div class="card-actions">
                         <button onclick="playerNameAdd(this)"class="btn btn-primary">Select</button>
@@ -75,12 +75,12 @@
                   
                   
                   <!-- player card 4 -->
-                  <div class="card w-96 bg-base-100 shadow-xl">
+                  <div class="card w-96 bg-base-100 shadow-xl mb-4">
                     <figure class="px-10 pt-10">
                       <img src="foodball-player-img/Karim Benzema.jpg" alt="Shoes" class="rounded-xl img-fluied" />
                     </figure>
                     <div class="card-body items-center text-center">
-                      <h2 class="card-title mb-4">Francesco Totti</h2>
+                      <h2 class="card-title  mb-4 text-2xl">Francesco Totti</h2>
                       
                       <div class="card-actions">
                         <button onclick="playerNameAdd(this)" class="btn btn-primary">Select </button>
@@ -90,12 +90,12 @@
                   
                   <!-- --- -->
                   <!-- player card 5 -->
-                  <div class="card w-96 bg-base-100 shadow-xl">
+                  <div class="card w-96 bg-base-100 shadow-xl mb-4">
                     <figure class="px-10 pt-10">
                       <img src="foodball-player-img/Kylian Mbappe.jpg" alt="Shoes" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                      <h2 class="card-title mb-4">Kylian Mbappe</h2>
+                      <h2 class="card-title mb-4 text-2xl">Kylian Mbappe</h2>
                      
                       <div class="card-actions">
                         <button onclick="playerNameAdd(this)" class="btn btn-primary">Select</button>
@@ -105,12 +105,12 @@
                   <!-- ------ -->
                   <!-- player card 6 -->
                   
-                  <div class="card w-96 bg-base-100 shadow-xl">
+                  <div class="card w-96 bg-base-100 shadow-xl mb-4">
                     <figure class="px-10 pt-10">
                       <img src="foodball-player-img/Neymar.jpg" alt="Shoes" class="rounded-xl" />
                     </figure>
                     <div class="card-body items-center text-center">
-                      <h2 class="card-title mb-4">Neymar</h2>
+                      <h2 class="card-title mb-4 text-2xl">Neymar</h2>
                      
                       <div class="card-actions">
                         <button onclick="playerNameAdd(this)" class="btn btn-primary">Select</button>
@@ -118,63 +118,83 @@
                     </div>
                   </div></div></div>
                   <!-- ------ -->
-                <div class="bg-black p-4 text-white ">
+                <div class=" p-4 text-white ">
                   <!-- Top player names adeed -->
-                  <div class="bg-black p-3">
-                    <h1 class="text-4xl text-center mt-6 mb-3">Select Top Player <span id="add">0</span></h1>
-                    <div id="player-name-add">
-                      <ul id="player-names">
-
-                      </ul>
-
+                  <div class="card w-96 bg-current shadow-xl">
+                    <div class="card-body">
+                      <div class=" px-8">
+                        <h1 class="text-4xl text-center text-slate-900 mt-6 mb-3 text-black">Select Top - <span id="add">0</span></h1>
+                        <div id="player-name-add">
+                          <ul id="player-names" class="text-black text-2xl">
+    
+                          </ul>
+    
+                        </div>
+                      </div>
+                      
                     </div>
                   </div>
+
+
+
+                  
+
+
+                  
                   <!-- ------ -->
                   <!-- player total cost calculation page  -->
-                  <div>
-                    <h1 class="text-4xl text-center mt-5 mb-8">Player Budget</h1>
-                    <!-- <div class="form-control"> -->
+
+                 
                       
-                      <label class="p-6 ">
-                        <span class="text-lg p-6">Per Player</span>
-                        <input id="per-player-cost" type="text" placeholder="Type here" class="text-black input input-bordered w-4/2 max-w-xs
-                        " />
-                      </label>
-                      <!-- calculat btn -->
-                      <div  class="text-center my-8">
-                        <button id="cal-btn" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-pramary text-center bolck">Calculate</button>
-
-                      </div>
+                      <div>
+                        <h1 class="text-4xl text-center text-white mt-5 my-8">Player Budget</h1>
+                        <!-- <div class="form-control"> -->
+                          
+                          <label class="p-6 ">
+                            <span class="text-lg p-6 ">Per Player</span>
+                            
+                            <input id="per-player-cost" type="text" placeholder="Type here" class="text-black input input-bordered w-4/2 max-w-xs
+                            " />
+                          </label>
+                          <!-- calculat btn -->
+                          <div  class="text-center my-8">
+                            <button id="cal-btn" class="bg-blue-700 btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-pramary text-center bolck">Calculate</button>
+    
+                          </div>
+                        
+                          <!-- --- -->
+    
+                          <h1 class="text-3xl text-center my-5">Player Expenses $<span id="player-total-cost">000</span></h1>
+                          <!-- manager input fild -->
+                          <label class="p-6 ">
+                            <span class="text-lg p-6">Manager</span>
+                            <input id="manager-cost" type="text" placeholder="Type here" class="input input-bordered w-4/2 max-w-xs text-black" />
+                          </label>
+                          <!-- ---- -->
+                          <!-- coach -->
+                          <div class="my-6">
+                            <label class="p-6 ">
+                              <span class="text-lg p-6 pl-11">Coach</span>
+                              <input id="coach-cost" type="text" placeholder="Type here" class="input input-bordered w-4/2 max-w-xs text-black" />
+                            </label>
+                          </div>
+                         
+    
+                          <!-- ---- -->
+                          <!-- Calcolate total btn -->
+                          <div  class="text-center my-8">
+                            <button id="calcolate-btn-two" class="bg-blue-700 btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-pramary text-center bolck">Calculate Total</button>
+    
+                          </div>
+                          <h1 class="text-3xl text-center my-7">Total $<span id="team-all-cost">000</span></h1>
+                        
+    
+                          <!-- ---- -->
+                        </div>
                     
-                      <!-- --- -->
+                  
 
-                      <h1 class="text-3xl text-center my-5">Player Expenses $<span id="player-total-cost">000</span></h1>
-                      <!-- manager input fild -->
-                      <label class="p-6 ">
-                        <span class="text-lg p-6">Manager</span>
-                        <input id="manager-cost" type="text" placeholder="Type here" class="input input-bordered w-4/2 max-w-xs text-black" />
-                      </label>
-                      <!-- ---- -->
-                      <!-- coach -->
-                      <div class="my-6">
-                        <label class="p-6 ">
-                          <span class="text-lg p-6 pl-11">Coach</span>
-                          <input id="coach-cost" type="text" placeholder="Type here" class="input input-bordered w-4/2 max-w-xs text-black" />
-                        </label>
-                      </div>
-                     
-
-                      <!-- ---- -->
-                      <!-- Calcolate total btn -->
-                      <div  class="text-center my-8">
-                        <button id="calcolate-btn-two" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-pramary text-center bolck">Calculate Total</button>
-
-                      </div>
-                      <h1 class="text-3xl text-center my-7">Total $<span id="team-all-cost">000</span></h1>
-                    
-
-                      <!-- ---- -->
-                    </div>
+                  
                   <!-- </div> -->
                   <!-- -------- -->
 
