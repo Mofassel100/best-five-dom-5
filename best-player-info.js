@@ -7,12 +7,10 @@ function updatePlayerNames(element){
         alert('please Maximum five playe select');
         return alert;
     }
-      
-    
 const playerNameAdd= document.getElementById('player-names');
 playerNameAdd.textContent = '';
     
-    for (let i = 0; i < element.length; i++){
+ for (let i = 0; i < element.length; i++){
 
 const names= element[i]
 const li = document.createElement('li');
@@ -73,7 +71,7 @@ document.getElementById('cal-btn').addEventListener('click',function(){
 
 // ---------------calcolate btn one end-------------------
 //------------ calcolate  bnt two start ----
-function calcolBtnTwoExpenses ( ){
+function totalTeamCost ( ){
 
     const playerTotalExpense = PlayerExpensesTotal();
     const playerTotalExpenseS= playerTotalExpense.innerText;
@@ -92,7 +90,7 @@ function calcolBtnTwoExpenses ( ){
 
 document.getElementById('calcolate-btn-two').addEventListener('click',function(){
 
-    calcolBtnTwoExpenses ( )
+    totalTeamCost  ( )
 })
 // ------ btn two end  ------
 
