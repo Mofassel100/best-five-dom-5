@@ -36,7 +36,7 @@
                     <div class="card-body items-center text-center">
                       <h2 class="card-title mb-4">Lionel Messi</h2>
                       <div class="card-actions">
-                        <button onclick="playerNameAdd(this)" class="btn btn-primary">Select</button>
+                        <button onclick="playerNameAdd(this)"  class="btn btn-primary">Select</button>
                       </div>
                     </div>
                   </div> 
@@ -64,7 +64,7 @@
                       <h2 class="card-title mb-4">Erling Haaland</h2>
                      
                       <div class="card-actions">
-                        <button onclick="playerNameAdd(this)" class="btn btn-primary">Select</button>
+                        <button onclick="playerNameAdd(this)"class="btn btn-primary">Select</button>
                       </div>
                     </div>
                   </div></div></div>
@@ -152,14 +152,14 @@
                       <!-- manager input fild -->
                       <label class="p-6 ">
                         <span class="text-lg p-6">Manager</span>
-                        <input type="text" placeholder="Type here" class="input input-bordered w-4/2 max-w-xs text-black" />
+                        <input id="manager-cost" type="text" placeholder="Type here" class="input input-bordered w-4/2 max-w-xs text-black" />
                       </label>
                       <!-- ---- -->
                       <!-- coach -->
                       <div class="my-6">
                         <label class="p-6 ">
                           <span class="text-lg p-6 pl-11">Coach</span>
-                          <input type="text" placeholder="Type here" class="input input-bordered w-4/2 max-w-xs text-black" />
+                          <input id="coach-cost" type="text" placeholder="Type here" class="input input-bordered w-4/2 max-w-xs text-black" />
                         </label>
                       </div>
                      
@@ -167,10 +167,10 @@
                       <!-- ---- -->
                       <!-- Calcolate total btn -->
                       <div  class="text-center my-8">
-                        <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-pramary text-center bolck">Calculate Total</button>
+                        <button id="calcolate-btn-two" class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-pramary text-center bolck">Calculate Total</button>
 
                       </div>
-                      <h1 class="text-3xl text-center my-7">Total $<span>000</span></h1>
+                      <h1 class="text-3xl text-center my-7">Total $<span id="team-all-cost">000</span></h1>
                     
 
                       <!-- ---- -->

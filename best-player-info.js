@@ -2,16 +2,11 @@
 
 let allPlayerNames = [];
 
-let calcNamesTotal = 1;
-
-
-
 
 
 
 function display(element){
-    
-   
+      
     
     const playerNameAdd= document.getElementById('player-names');
     playerNameAdd.textContent = '';
@@ -34,12 +29,11 @@ const headAdd = document.getElementById('add');
 headAdd.innerText = allPlayerNames.length;
 caculatPlayerExp(allPlayerNames);
 
-
-
 }
 
 // -----------------------------------------
-// calcolat btn start now
+// -----calcolat btn start now-------
+let calcNamesTotal = 1;
 function caculatPlayerExp(element){
     let calcExpenBtn =1+1;
     calcExpenBtn.textContent ='';
@@ -49,43 +43,60 @@ function caculatPlayerExp(element){
     return calcExpenBtn;
 }
 
-
 function totalExpenses (){
 const previTotalPlayer
     =caculatPlayerExp (allPlayerNames);
                        
 const perPlayerFild = document.getElementById('per-player-cost');
+perPlayerFild.value = '';
+if(typeof perPlayerFild !=='number'){
+    return alert('Please Enter your number')
+}
 const perPlayerSt= perPlayerFild.value;
 const newPerPlayerFild = parseInt(perPlayerSt);
 const totalExpent = newPerPlayerFild * previTotalPlayer;
 const playerTotalExpen = document.getElementById('player-total-cost');
 playerTotalExpen.innerText = totalExpent;
+return playerTotalExpen;
 
 }
 
-
-// calculate btn add 
 document.getElementById('cal-btn').addEventListener('click',function(){
 
     totalExpenses ()
     
 })
 
-// --------------------------
-// calcolate total cost 
+// ---------------calcolate btn one end-------------------
+//------------ calcolate  bnt two start ----
+function calcolBtnTwoExpenses ( ){
 
-document.getElementById('').addEventListener('click',function(){
-
-    const playerExpense = totalExpenses();
-    const managerInputFildPrice = document.getElementById('');
+    const playerTotalExpense = totalExpenses();
+    const playerTotalExpenseS= playerTotalExpense.innerText;
+    const playerTotalExpenseNum = parseInt(playerTotalExpenseS)
+    const managerInputFildPrice = document.getElementById('manager-cost');
+    managerInputFildPrice.value ='';
+    if(typeof managerInputFildPrice !=='number'){
+        return alert('Please Enter your number')
+    }
     const managerInputFildStringPrice= managerInputFildPrice.value;
     const newManagerTotalPric = parseInt(managerInputFildStringPrice);
-    const coachPriceFild = document.getElementById('');
+    const coachPriceFild = document.getElementById('coach-cost');
+    coachPriceFild.value = '';
+    if(typeof coachPriceFild !=='number'){
+        return alert('Please Enter your number')
+    }
     const coachPriceFildDaSt= coachPriceFild.value;
     const coachTotalPrice = parseInt(coachPriceFildDaSt);
-    const totalCost = playerExpense + newManagerTotalPric + coachTotalPrice;
-    const totalCalcoCost = document.getElementById('');
+    const totalCost = playerTotalExpenseNum + newManagerTotalPric + coachTotalPrice;
+    const totalCalcoCost = document.getElementById('team-all-cost');
     totalCalcoCost.innerText =totalCost;
+
+}
+
+document.getElementById('calcolate-btn-two').addEventListener('click',function(){
+
+    calcolBtnTwoExpenses ( )
 })
 
 
