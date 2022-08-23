@@ -2,9 +2,9 @@
 
 let allPlayerNames = [];
 function updatePlayerNames(element){
-    if(allPlayerNames.length === 5){
+    if(allPlayerNames.length === 6){
 
-        alert('please Maximum five playe select');
+        alert('please Maximum six playe select');
         return alert;
     }
 const playerNameAdd= document.getElementById('player-names');
